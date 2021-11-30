@@ -90,7 +90,7 @@ TxtRotate.prototype.tick = function() {
   }, delta);
 };
 
-TxtRotate.prototype.tick = function() {
+/*TxtRotate.prototype.tick = function() {
   var i = this.loopNum % this.toRotate.length;
   var fullTxt = this.toRotate[i];
   
@@ -109,19 +109,19 @@ TxtRotate.prototype.tick = function() {
     delta /= 5;
   }
 
-  /*if (!this.isDeleting && this.txt === fullTxt) {
+  if (!this.isDeleting && this.txt === fullTxt) {
     delta = this.period;
     this.isDeleting = true;
   } else if (this.isDeleting && this.txt === '') {
     this.isDeleting = false;
     this.loopNum++;
     delta = 500;
-  }*/
+  }
 
   setTimeout(function() {
     that.tick();
   }, delta);
-};
+};*/
 
 /* Word Cloud */
 
