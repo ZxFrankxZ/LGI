@@ -76,7 +76,7 @@ var TxtRotate = function(el, toRotate, period) {
   this.isDeleting = false;
 };
 
-/*TxtRotate.prototype.tick = function() {
+TxtRotate.prototype.tick = function() {
   var i = this.loopNum % this.toRotate.length;
   var fullTxt = this.toRotate[i];
 
@@ -106,7 +106,7 @@ var TxtRotate = function(el, toRotate, period) {
   setTimeout(function() {
     that.tick();
   }, delta);
-};*/
+};
 
 /* Word Cloud */
 
