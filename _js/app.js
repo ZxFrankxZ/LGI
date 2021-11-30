@@ -80,8 +80,10 @@ TxtRotate.prototype.tick = function() {
   var i = this.loopNum % this.toRotate.length;
   var fullTxt = this.toRotate[i];
 
-  if (!this.isDeleting) {
+  if (!this.isDeleting && this.loopNum === 0) {
     this.txt = fullTxt.substring(0, this.txt.length + 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
   }
   this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
@@ -95,9 +97,10 @@ TxtRotate.prototype.tick = function() {
   if (!this.isDeleting && this.txt === fullTxt) {
     delta = this.period;
     this.isDeleting = true;
+	this.loopNum = 0;
   } else if (this.isDeleting && this.txt === '') {
     this.isDeleting = false;
-    this.loopNum++;
+    //this.loopNum++;
     delta = 500;
   }
 
