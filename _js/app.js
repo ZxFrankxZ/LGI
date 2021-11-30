@@ -69,7 +69,7 @@ function fadeOutPreloader(element, duration) {
 var TxtRotate = function(el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
-  this.loopNum = 1;
+  this.loopNum = 0;
   this.period = parseInt(period, 10) || 2000;
   this.txt = '';
   this.tick();
@@ -80,9 +80,7 @@ TxtRotate.prototype.tick = function() {
   var i = this.loopNum % this.toRotate.length;
   var fullTxt = this.toRotate[i];
 
-  if (this.isDeleting) {
-    this.txt = fullTxt.substring(0, this.txt.length - 1);
-  } else {
+  if (!this.isDeleting) {
     this.txt = fullTxt.substring(0, this.txt.length + 1);
   }
   this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
