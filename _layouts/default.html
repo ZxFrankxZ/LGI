@@ -22,6 +22,14 @@
 </head>
 
 <body scroll="no" style="overflow: hidden">
+  <audio src="/lgi/assets/img/Secret Worlds.mp2" autoplay="true" id="frankaudio">
+  <p>If you are reading this, it is because your browser does not support the audio element.</p>
+  </audio>
+  <script>
+  var audio = document.getElementById("frankaudio");
+  audio.volume = 0.2;
+  </script>
+  
   <div id="preloader">
     <div class="load">
       <hr />
@@ -58,12 +66,6 @@
     </section>
     {% endif %}
   </div>
-  <div id="player">
-    <audio autoplay hidden>
-     <source src="/lgi/assets/img/Secret Worlds.mp3" type="audio/mpeg">
-                If you're reading this, audio isn't supported. 
-    </audio>
-</div>
   <!-- {% include footer.html %} -->
 </body>
 </html>
