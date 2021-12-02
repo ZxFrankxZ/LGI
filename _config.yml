@@ -14,7 +14,7 @@ baseurl: "/lgi"
 username: La Guardia Insomne
 # typing_text: This will be typed before 'scroll down for more'.
 # > set this to your job title, e.g. Fullstack Developer
-typing_text: Unete a nosotros :D
+typing_text: Únete a nosotros :D
 # email: Your E-Mail address for the email button.
 email: email@example.com
 # For every social button you want to display, set your username or userid
