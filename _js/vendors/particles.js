@@ -483,7 +483,7 @@ var pJS = function(tag_id, params) {
       case 'image':
         function draw() {
           pJS.canvas.ctx.drawImage(
-            "https://cdnb.artstation.com/p/assets/images/images/026/338/617/large/carlos-daniel-dorta-navarro-laguardiainsomne.jpg?1588519446",
+            img_obj,
             p.x - radius,
             p.y - radius,
             radius * 2,
