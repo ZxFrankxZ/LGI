@@ -22,22 +22,7 @@
 </head>
 
 <body scroll="no" style="overflow: hidden">
-<iframe src="/lgi/assets/img/Secret-Worlds.mp3" allow="autoplay" style="display:none" id="frankiframeAudio"></iframe> 
-
-<audio autoplay loop id="frankaudio">
-	<source src="/lgi/assets/img/Secret-Worlds.mp3" type="audio/mp3">
-</audio>
-<script>
-	var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-	if (!isChrome){
-      $('#frankiframeAudio').remove()
-	  var audio = document.getElementById("frankaudio");
-	  audio.volume = 0.2
-	}
-	else {
-      $('#frankaudio').remove() // just to make sure that it will not have 2x audio in the background 
-	}
-</script>
+<embed src="/lgi/assets/img/Secret-Worlds.mp3" loop="true" autostart="true" width="10" height="10">
   <div id="preloader">
     <div class="load">
       <hr />
