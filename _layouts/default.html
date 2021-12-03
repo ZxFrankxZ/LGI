@@ -35,7 +35,8 @@ window.addEventListener('load', function () {
                     function (buffer) {
                         source.buffer = buffer;
                         source.connect(audioCtx.destination);
-                        source.loop = false;
+                        source.loop = true;
+                        source.volume = 0.02;
                     });
             source.start(0);
         });
