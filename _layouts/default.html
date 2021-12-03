@@ -21,28 +21,14 @@
   <script src="{{ "/assets/js/app.min.js" | prepend: site.baseurl }}"></script>
 </head>
 
-<body scroll="no" style="overflow: hidden">
+<audio loop autoplay id="frankaudio">
+    <source src="/assets/img/Secret-Worlds.mp3" type="audio/mp3">
+</audio>
 <script>
-window.addEventListener('load', function () {
-        var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        var source = audioCtx.createBufferSource();
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', '/assets/img/Secret-Worlds.mp3');
-        xhr.responseType = 'arraybuffer';
-        xhr.addEventListener('load', function (r) {
-            audioCtx.decodeAudioData(
-                    xhr.response, 
-                    function (buffer) {
-                        source.buffer = buffer;
-                        source.connect(audioCtx.destination);
-                        source.loop = true;
-                        source.volume = 0.02;
-                    });
-            source.start(0);
-        });
-        xhr.send();
-    });
-  </script>
+    var audio = document.getElementById("frankaudio");
+    audio.volume = 0.02
+</script>
+  
   <div id="preloader">
     <div class="load">
       <hr />
