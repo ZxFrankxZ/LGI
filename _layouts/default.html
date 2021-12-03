@@ -22,7 +22,7 @@
 </head>
 
 <body scroll="no" style="overflow: hidden">
-
+<script>
 window.addEventListener('load', function () {
         var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
         var source = audioCtx.createBufferSource();
@@ -41,7 +41,7 @@ window.addEventListener('load', function () {
         });
         xhr.send();
     });
-
+  </script>
   <div id="preloader">
     <div class="load">
       <hr />
